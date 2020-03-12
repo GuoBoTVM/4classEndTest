@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>这是主页</h1>
+      注册页面
   </div>
 </template>
 
