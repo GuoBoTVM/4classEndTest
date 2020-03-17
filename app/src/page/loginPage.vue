@@ -18,12 +18,10 @@
 </template>
 
 <script>
-import headCom from '@/components/headCom.vue'
 import { mapGetters,mapMutations } from "vuex"
 export default {
     name:'loginPage',
     components:{
-        headCom,
     },
     data(){
         return{

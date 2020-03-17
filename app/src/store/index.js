@@ -12,11 +12,15 @@ export default new Vuex.Store({
     state:{
         userLogin:false,
         userDataStore: data ||  {userName:""},
+        count:0,
     },
     getters:{
         getUserLogin(state){
             return state.userLogin
             console.log(state.userLogin)
+        },
+        gettersCount(state){
+            return state.count
         }
     },
     mutations:{
@@ -29,7 +33,20 @@ export default new Vuex.Store({
             state.userLogin=item;
             state.userDataStore.userName=userName;
             localStorage.removeItem('userInfo')
+        },
+        mutationsCount(state , item){
+            state.count++;
+            console.log(item)
         }
 
+    },
+    actions:{
+        actionCount(state){
+            let obj={
+                name:'tom',
+                age:'9'
+            }
+            state.commit('mutationsCount',obj)
+        }
     }
 })

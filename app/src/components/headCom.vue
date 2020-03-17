@@ -27,7 +27,8 @@ export default {
                 item:false,
                 userName:'',
             }
-            this.$store.commit('userLogout',obj)
+            this.$store.commit('userLogout',obj);
+            this.$router.push('/login');
         }
     },
     computed:{
@@ -61,6 +62,7 @@ export default {
         }
         .warn_button{
             margin: 0 20px;
+            margin-left: 50px;
         }
     }
 }
